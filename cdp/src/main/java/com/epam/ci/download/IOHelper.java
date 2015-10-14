@@ -27,4 +27,8 @@ public class IOHelper {
             logger.info("Write data to file.");
         }
     }
+
+    public static boolean isFileExist(File file) {
+        return file.exists();
+    }
 }
