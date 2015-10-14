@@ -6,10 +6,8 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.io.File;
 
-import static com.epam.ci.download.IOHelper.downloadFileFromURL;
 
 /**
  * @author Savostytskyi Anton on 14.10.2015.
