@@ -31,4 +31,12 @@ public class IOHelper {
     public static boolean isFileExist(File file) {
         return file.exists();
     }
+
+    public static void deleteFile(File file) {
+        if(file.delete()){
+            logger.info("File deleted.");
+        }else{
+            logger.info("Operation aborted.");
+        }
+    }
 }

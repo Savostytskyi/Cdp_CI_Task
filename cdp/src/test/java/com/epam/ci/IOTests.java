@@ -3,6 +3,7 @@ package com.epam.ci;
 import com.epam.ci.download.Constants;
 import com.epam.ci.download.IOHelper;
 import org.apache.log4j.Logger;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,5 +28,10 @@ public class IOTests {
         IOHelper.downloadFileFromURL(Constants.DOWNLOAD_FILE_URL, file);
         Assert.assertTrue("FAILED: file not present", IOHelper.isFileExist(file));
         logger.info("Test: File successfully download.");
+    }
+
+    @After
+    public void tearDown() {
+        IOHelper.deleteFile(file);
     }
 }
