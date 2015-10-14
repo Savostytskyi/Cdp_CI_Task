@@ -11,7 +11,7 @@ import java.nio.channels.ReadableByteChannel;
  */
 public class IOHelper {
 
-    public static void downloadFileFromURL(String urlString, File destination) throws Throwable {
+    public static void downloadFileFromURL(String urlString, File destination) throws Exception {
         URL website = new URL(urlString);
         try(
                 ReadableByteChannel rbc = Channels.newChannel(website.openStream());

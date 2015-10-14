@@ -6,7 +6,7 @@ version = '1.0'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-task dowloader(type: Jar) {
+task downloader(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'File dowloader jar',
                 'Implementation-Version': version,
@@ -22,6 +22,6 @@ repositories {
 }
 
 dependencies {
-    compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'org.apache.logging.log4j:log4j-api:2.4'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
